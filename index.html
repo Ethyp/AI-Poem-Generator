@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=,, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Poem Generator</title>
   </head>
@@ -12,7 +13,7 @@
         <h1>AI English Poem Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder=" Enter the topic of the English poem "
@@ -23,11 +24,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem">
-          I wandered lonely as a cloud
-          <br />
-          That floats on high o'er vales and hills,
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
       <footer>
         This AI project was Coded by Ethel Phiri is
