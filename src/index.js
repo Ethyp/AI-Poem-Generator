@@ -18,6 +18,14 @@ function generatePoem(event) {
     "you are a romantic poem expert and you love writting short poems about love. Your mission is to create a beautiul poem  in Shakesphere style. Donnot include a title to the poem. Line break every sentence with a <br/>. Sign with 'SheCodes AI' make it bold with a <strong></strong> element at the end of the poem. Make sure to include vivid imagery and emotional depth. This poem should only be 5 lines";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `Generating your poem ${instructionsInput.value} `;
+
+  console.log("Generating poem");
+  console.log(`prompt: ${prompt}`);
+  console.log(`context: ${context}`);
+
   axios.get(apiUrl).then(displayPoem);
 }
 
